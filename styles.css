@@ -1,0 +1,56 @@
+:root{color-scheme:light;--bg:#fff;--ink:#000;--muted:#828282;--line:#b9b9b9;--button:#000;--button-text:#fff;--brand:#b4b4b4;--placeholder:#e8e8e8}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#a1a1a1;--ink:#000;--muted:#292929;--line:#373737;--button:#000;--button-text:#fff;--brand:#b4b4b4;--placeholder:#777}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{position:relative;isolation:isolate;margin:0;background:var(--bg);color:var(--ink);font:400 24px/1.5 Inter,Arial,sans-serif;overflow-x:hidden;transition:background-color .25s ease}
+h1,h2,h3,p{margin:0} img{display:block;max-width:100%} a{color:inherit} button{font:inherit;cursor:pointer} :focus-visible{outline:3px solid #444;outline-offset:4px}
+.obertka{width:min(100% - 160px,1280px);margin-inline:auto}
+.kontur{position:absolute;z-index:0;top:0;left:0;width:100%;aspect-ratio:1440 / 5909;background:url("assets/kontur_komp.svg") top center / 100% 100% no-repeat;pointer-events:none}
+.shapka,main,.podval{position:relative;z-index:1}
+main{position:relative;isolation:isolate}
+.shapka{height:164px;background:var(--bg)}
+.shapka__vnutri{height:100%;display:flex;align-items:center;justify-content:space-between}
+.shapka__podpis{background:var(--brand);border-radius:41px;padding:18px 42px;font-size:20px;font-weight:500;text-decoration:none;white-space:nowrap}
+.tema{border:0;background:transparent;width:64px;height:64px;display:grid;place-items:center;border-radius:50%;color:var(--ink)}
+.tema__ikonka{width:34px;height:34px;object-fit:contain}
+.nachalo{padding-top:48px;min-height:1207px;position:relative}
+.nachalo__tekst{max-width:844px}.nachalo__zagolovok{font-size:64px;line-height:1.2;letter-spacing:-.02em;font-weight:700}.nachalo__opisanie{margin-top:24px;max-width:844px;color:var(--ink)}
+.nachalo__knopka{display:inline-flex;align-items:center;justify-content:center;background:var(--button);color:var(--button-text);padding:20px 32px;border-radius:8px;text-decoration:none;font-weight:500;margin-top:40px;box-shadow:0 1px 2px #0000000d}
+.nachalo__knopka:hover{opacity:.8}.nachalo__foto{width:669px;height:754px;object-fit:cover;margin-top:58px}
+.razdel__zagolovok{font-size:48px;line-height:1.2;font-weight:600;letter-spacing:-.02em;margin-bottom:48px}
+.razdel--dela{padding-top:0}.kartochki{display:grid;gap:32px}.kartochki--tri{grid-template-columns:repeat(3,minmax(0,1fr))}.kartochki--dve{grid-template-columns:repeat(2,minmax(0,1fr));gap:31px}
+.kartochka{min-width:0}.kartochka__ramka{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:1;background:var(--placeholder)}.kartochka__foto{width:100%;height:100%;object-fit:cover}.kartochka__zagolovok{font-size:24px;font-weight:500;line-height:1.5;margin-top:24px}.kartochka__opisanie{color:var(--muted);font-size:24px;line-height:1.5;max-width:95%}
+.razdel__liniya{border-top:1px solid var(--line);height:29px;margin-top:42px}
+.razdel--dopolnitelno{padding-top:109px}.dop{display:grid;grid-template-columns:516px 704px;gap:328px}.dop__tekst .razdel__zagolovok{margin-bottom:48px}.dop__punkt{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid var(--line)}.dop__punkt:last-child{border:0}.dop__podzagolovok{font-size:24px;font-weight:500}.dop__opisanie{color:var(--muted);margin-top:8px}.dop__foto{width:704px;height:704px;align-self:start;border-radius:8px 0 0 8px;background:var(--placeholder);overflow:hidden}.dop__foto img{width:100%;height:100%;object-fit:cover}
+.razdel--igry{padding-top:174px}.kartochka__ramka--igra{aspect-ratio:auto;height:341px}.kartochka--shirokaya .kartochka__zagolovok{margin-top:32px}.kartochka--shirokaya .kartochka__opisanie{margin-top:8px}
+.razdel--sobytia{padding-top:205px}.kartochka__ramka--sobytie{aspect-ratio:auto;height:486px;border-radius:0}
+.podval{position:relative;isolation:isolate;margin-top:79px;padding-bottom:220px;overflow:visible}
+.podval__itog{border-block:1px solid var(--line);min-height:178px;padding-block:30px;display:flex;justify-content:space-between;gap:32px;align-items:center}.podval__spasibo{font-weight:500;max-width:970px}.podval__socseti{flex:none;text-align:center}.podval__podpis_socseti{font-weight:500}.podval__ssylki{display:flex;gap:18px;margin-top:12px;align-items:center}.podval__ikonka{width:103px;height:105px;object-fit:cover;border-radius:50%}.podval__foto_ram{width:447px;margin:35px auto 0;text-align:center;border-inline:1px solid var(--line);padding:0 35px 35px}.podval__foto{height:545px;width:363px;max-width:100%;object-fit:cover;margin-inline:auto}.podval__podpis{margin-top:34px;font-weight:500;border-top:1px solid var(--line);padding-top:12px}
+@media(max-width:1000px){.obertka{width:min(100% - 60px,800px)}.nachalo{min-height:auto;padding-bottom:80px}.nachalo__zagolovok{font-size:clamp(40px,6vw,64px)}.nachalo__foto{max-width:100%;height:auto;aspect-ratio:669/754}.razdel--dela{padding-top:30px}.dop{grid-template-columns:1fr 1fr;gap:40px}.dop__foto{width:100%;height:100%;min-height:450px}.razdel--igry,.razdel--sobytia{padding-top:110px}.podval__itog{font-size:18px}}
+@media(max-width:650px){body{font-size:16px}.obertka{width:calc(100% - 28px)}.shapka{height:84px}.shapka__podpis{font-size:11px;padding:9px 15px}.tema{width:42px;height:42px}.tema__ikonka{width:28px;height:28px}.nachalo{padding-top:24px;padding-bottom:16px}.nachalo__zagolovok{font-size:32px;line-height:1.22}.nachalo__opisanie{font-size:24px;line-height:1.5;margin-top:24px}.nachalo__knopka{font-size:24px;margin-top:40px}.nachalo__foto{width:100%;margin-top:16px}.razdel__zagolovok{font-size:24px;margin-bottom:30px}.razdel--dela{padding-top:0}.kartochki--tri,.kartochki--dve{grid-template-columns:1fr;gap:22px}.razdel--dela .kartochka{max-width:252px;margin-inline:auto;text-align:center}.razdel--dela .kartochka__ramka{width:252px;max-width:100%;margin-inline:auto}.kartochka__zagolovok{font-size:16px;margin-top:8px}.kartochka__opisanie{font-size:16px;max-width:100%}.razdel__liniya{margin-top:16px}.razdel--dopolnitelno{padding-top:34px}.dop{display:flex;flex-direction:column;gap:20px}.dop__tekst .razdel__zagolovok{margin-bottom:45px}.dop__podzagolovok{font-size:20px}.dop__opisanie{font-size:16px}.dop__punkt{padding-bottom:12px;margin-bottom:0}.dop__foto{order:-1;height:0;min-height:0;display:none}.razdel--igry,.razdel--sobytia{padding-top:50px}.kartochka__ramka--igra{height:auto;aspect-ratio:305/180}.kartochka__ramka--sobytie{height:auto;aspect-ratio:308/175}.kartochka--shirokaya .kartochka__zagolovok{margin-top:10px}.kartochka--shirokaya .kartochka__opisanie{margin-top:0}.podval{margin-top:50px;padding-bottom:70px}
+.kontur{aspect-ratio:373 / 4223;background-image:url("assets/kontur_telefon.svg")}.podval__itog{display:block;padding:12px 0;font-size:14px}.podval__socseti{text-align:center;margin-top:12px}.podval__ssylki{justify-content:center}.podval__ikonka{width:52px;height:52px}.podval__foto_ram{width:190px;margin-top:10px;padding:0 20px 20px}.podval__foto{height:184px;width:122px}.podval__podpis{font-size:14px;margin-top:8px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}body{transition:none}}
+
+/* Декор из исходных слоёв Figma. */
+.dekor{position:absolute;z-index:0;top:0;left:50%;width:1440px;height:5909px;transform:translateX(-50%);pointer-events:none}
+.dekor--telefon{display:none}
+.dekor__foto{position:absolute;display:block;max-width:none;object-fit:contain;pointer-events:none}
+.dekor__palma_verh{left:907px;top:711px}
+.dekor__palma_malaya{left:1086px;top:1180px}
+.dekor__gamak{left:1213px;top:909px}
+.dekor__ochki_verh{left:984px;top:1121px}
+.dekor__ochki_foto{left:578px;top:3082px}
+.dekor__ochki_sobytie{left:1454px;top:3883px}
+.dekor__palmy_vnizu{left:-270px;top:5199px}
+.dekor__palma_vnizu_sprava{left:619px;top:5090px}
+@media(max-width:650px){
+  .dekor--komp{display:none}
+  .dekor--telefon{display:block;width:373px;height:4223px}
+  .dekor__palma_verh_telefon{left:280px;top:46px;transform:scale(.25);transform-origin:top left}
+  .dekor__palma_kartochka_telefon{left:333px;top:455px;transform:scale(.4);transform-origin:top left}
+  .dekor__gamak_telefon{left:290px;top:970px;transform:scale(.33);transform-origin:top left}
+  .dekor__ochki_foto_telefon{left:227px;top:1270px;transform:scale(.8);transform-origin:top left}
+  .dekor__ochki_sobytie_telefon{left:282px;top:1665px;transform:scale(.424);transform-origin:top left}
+  .dekor__palmy_vnizu_telefon{left:-25px;top:4003px;transform:scale(.371);transform-origin:top left}
+  .dekor__palma_vnizu_sprava_telefon{left:200px;top:3996px;transform:scale(.219);transform-origin:top left}
+}
